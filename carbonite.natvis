@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+    <Type Name="CarboniteArray&lt;*&gt;">
+        <DisplayString>[{Count} Elements]</DisplayString>
+        <Expand>
+            <Item Name="Count">Count</Item>
+            <ArrayItems Condition="Count > 0">
+                <Size>Count</Size>
+                <ValuePointer>Elements</ValuePointer>
+            </ArrayItems>
+        </Expand>
+    </Type>
+
+    <Type Name="CarboniteArray&lt;char&gt;" Priority="High">
+        <DisplayString>{Elements,s}</DisplayString>
+        <StringView>Elements,s</StringView>
+    </Type>
+</AutoVisualizer>
