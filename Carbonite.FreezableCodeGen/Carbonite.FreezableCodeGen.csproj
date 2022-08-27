@@ -1,6 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <AssemblyTitle>Carbonite Source Generators</AssemblyTitle>
+    <Description>Carbonite C# Source Generators</Description>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 

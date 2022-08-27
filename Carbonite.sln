@@ -5,9 +5,14 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carbonite", "Carbonite\Carbonite.csproj", "{A2E5FB13-8A63-43CF-BAD6-DBA973034A5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarboniteExampleWriter", "CarboniteExampleWriter\CarboniteExampleWriter.csproj", "{E1031932-10BC-4972-9988-E6769440B61B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarboniteExampleWriter", "CarboniteExampleWriter\CarboniteExampleWriter.csproj", "{E1031932-10BC-4972-9988-E6769440B61B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carbonite.FreezableCodeGen", "Carbonite.FreezableCodeGen\Carbonite.FreezableCodeGen.csproj", "{0601DE6C-96CD-423E-A819-B4DBBFBF1711}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carbonite.FreezableCodeGen", "Carbonite.FreezableCodeGen\Carbonite.FreezableCodeGen.csproj", "{0601DE6C-96CD-423E-A819-B4DBBFBF1711}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2FD19996-F2E2-470B-95C6-668451020D67}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
