@@ -23,6 +23,7 @@
 #pragma once
 
 #include <cstdint>
+#include <cstddef>
 
 /**
  * @brief The value that valid CarboniteImage objects have for their CarboniteImage::Magic member.
