@@ -31,4 +31,4 @@ jobs:
       - name: CMake
         run: mkdir build && cd build && cmake -G Ninja ../CarboniteExampleNative
       - name: Build
-        run: cmake --build . --target all
+        run: cd build && cmake --build . --target all
