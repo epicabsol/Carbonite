@@ -2,7 +2,7 @@ name: verify-pull-request
 on: [pull_request]
 jobs:
   # Reference: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-  build:
+  dotnet-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -18,3 +18,17 @@ jobs:
       # TODO: Uncomment these once we have unit tests
       #- name: Test
       #  run: dotnet test --no-restore --verbosity normal
+  native-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup GCC
+        uses: aminya/setup-cpp@v1
+        with:
+          compiler: gcc
+          cmake: true
+          ninja: true
+      - name: CMake
+        run: mkdir build && cd build && cmake -G Ninja ../CarboniteExampleNative
+      - name: Build
+        run: cd build && cmake --build . --target all
