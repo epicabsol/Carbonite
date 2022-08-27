@@ -2,12 +2,21 @@
 
   <PropertyGroup>
     <AssemblyTitle>Carbonite</AssemblyTitle>
-    <Description>Carbonite .NET Serialization Library</Description>
+    <Description>Carbonite's .NET Serialization Library</Description>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <EnablePreviewFeatures>True</EnablePreviewFeatures>
     <GenerateRequiresPreviewFeaturesAttribute>True</GenerateRequiresPreviewFeaturesAttribute>
+    <Version>$(AssemblyVersion)</Version>
+    <Authors>$(Company)</Authors>
+    <Company />
+    <PackageProjectUrl>https://github.com/epicabsol/Carbonite</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/epicabsol/Carbonite</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -17,5 +26,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <LangVersion>preview</LangVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

@@ -1,6 +1,8 @@
 Carbonite
 =========
 
+![Carbonite NuGet Package](https://img.shields.io/nuget/v/Carbonite?label=Carbonite&style=flat-square) ![CarboniteFreezableCodeGen NuGet Package](https://img.shields.io/nuget/v/CarboniteFreezableCodeGen?label=CarboniteFreezableCodeGen&style=flat-square)
+
 Carbonite is a C# library, C++ single-header library, and binary file format for storing data models that can be loaded and used from native code as quickly as possible.
 The intended audience for Carbonite is games and other applications where high data loading performance is needed.
 
@@ -14,7 +16,7 @@ C# Data Model => **freezing** (C# library) => Frozen Carbonite Image (frozen dat
 Getting Started
 ---------------
 
-To create frozen Carbonite Images with C#, add the `Carbonite` and `Carbonite.FreezableCodeGen` NuGet packages to your .NET 6+ project. You will need to enable preview features for your project by adding `<EnablePreviewFeatures>True</EnablePreviewFeatures>` to a `<PropertyGroup>` in your project file. You can also add the `PrivateAssets="all"` and `ExcludeAssets="compile; runtime"` attributes to the `<PackageReference>` element for `Carbonite.FreezableCodeGen`, as you do not need its assembly in your build output nor in referencing projects. You are now ready to freeze some images!
+To create frozen Carbonite Images with C#, add the [Carbonite](https://www.nuget.org/packages/Carbonite/) and [CarboniteFreezableCodeGen](https://www.nuget.org/packages/CarboniteFreezableCodeGen/) NuGet packages to your .NET 6+ project. You will need to enable preview features for your project by adding `<EnablePreviewFeatures>True</EnablePreviewFeatures>` to a `<PropertyGroup>` in your project file. You can also add the `PrivateAssets="all"` and `ExcludeAssets="compile; runtime"` attributes to the `<PackageReference>` element for `Carbonite.FreezableCodeGen`, as you do not need its assembly in your build output nor in referencing projects. You are now ready to freeze some images!
 
 To load frozen Carbonite Images with C++, you will probably want to use the `carbonite.h` single-header library (in the `/Include/carbonite/` directory of this repo). Like other single-header libraries, make sure to define the `CARBONITE_IMPLEMENTATION` macro in exactly one of your source files before `carbonite.h` is included. Personally, for non-trivial projects I like adding an individual `.cpp` file (with only those two lines) for single-header libraries like this one.
 
